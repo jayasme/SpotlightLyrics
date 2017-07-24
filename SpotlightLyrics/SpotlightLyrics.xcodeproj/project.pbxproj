@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1DEA770F1F259ACE00C1040B /* SpotlightLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */; };
+		1DEA77331F259CE900C1040B /* SpotlightLyricsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */; };
+		1DEA77341F259CE900C1040B /* SpotlightLyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */; };
+		1DEA77371F259E3500C1040B /* SpotlightLyricsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */; };
+		1DEA77381F259E3500C1040B /* SpotlightLyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DEA77031F259A6C00C1040B /* SpotlightLyrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightLyrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEA77071F259A6C00C1040B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyrics.swift; sourceTree = "<group>"; };
+		1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsParser.swift; sourceTree = "<group>"; };
+		1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsView.swift; sourceTree = "<group>"; };
+		1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsCell.swift; sourceTree = "<group>"; };
+		1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotlightLyricsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,10 @@
 		1DEA77051F259A6C00C1040B /* SpotlightLyrics */ = {
 			isa = PBXGroup;
 			children = (
+				1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */,
+				1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */,
+				1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */,
+				1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */,
 				1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */,
 				1DEA77071F259A6C00C1040B /* Info.plist */,
 			);
@@ -121,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEA77381F259E3500C1040B /* SpotlightLyricsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEA77331F259CE900C1040B /* SpotlightLyricsParser.swift in Sources */,
+				1DEA77371F259E3500C1040B /* SpotlightLyricsCell.swift in Sources */,
+				1DEA77341F259CE900C1040B /* SpotlightLyricsView.swift in Sources */,
 				1DEA770F1F259ACE00C1040B /* SpotlightLyrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
