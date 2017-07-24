@@ -1,2 +1,4 @@
-# JayaLyric
-A song lyric control for iOS using Swift language.
+# SpotlightLyric
+
+##Introcuding
+SpotlightLyrics is a native component supportes iOS and developed by Swift language.
