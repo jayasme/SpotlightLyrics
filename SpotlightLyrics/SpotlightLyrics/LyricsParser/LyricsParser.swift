@@ -14,35 +14,6 @@ public protocol LyricsManagerDelegate: class {
     func occoursError(error: Error)
 }
 
-
-public class LyricsItem {
-    
-    public init(time: TimeInterval, lyric: String = "") {
-        self.time = time
-        self.lyric = lyric
-    }
-    
-    public var time: TimeInterval
-    public var lyric: String
-}
-
-public struct LyricsHeader {
-    // ti
-    public var title: String?
-    // ar
-    public var author: String?
-    // al
-    public var album: String?
-    // by
-    public var by: String?
-    // offset
-    public var offset: TimeInterval = 0
-    // re
-    public var editor: String?
-    // ve
-    public var version: String?
-}
-
 public class LyricsParser {
     
     public var header: LyricsHeader
@@ -110,7 +81,7 @@ public class LyricsParser {
     }
     
     private func parseLine(line: String) {
-        guard let line = line.on_blankToNil() else {
+        guard let line = line.blankToNil() else {
             return
         }
 

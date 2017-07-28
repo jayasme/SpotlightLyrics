@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4A03F31F2B5AF400E7127D /* LyricsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03F21F2B5AF400E7127D /* LyricsParser.swift */; };
+		1D4A03F81F2B5B1900E7127D /* LyricsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03F41F2B5B1900E7127D /* LyricsCell.swift */; };
+		1D4A03F91F2B5B1900E7127D /* LyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A03F51F2B5B1900E7127D /* LyricsCell.xib */; };
+		1D4A03FA1F2B5B1900E7127D /* LyricsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03F61F2B5B1900E7127D /* LyricsCellViewModel.swift */; };
+		1D4A03FB1F2B5B1900E7127D /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03F71F2B5B1900E7127D /* LyricsView.swift */; };
+		1D4A03FD1F2B5B9F00E7127D /* LyricsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03FC1F2B5B9F00E7127D /* LyricsItem.swift */; };
+		1D4A03FF1F2B5BDA00E7127D /* LyricsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A03FE1F2B5BDA00E7127D /* LyricsHeader.swift */; };
+		1D9B1F261F2B6EC700BD4C06 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B1F251F2B6EC700BD4C06 /* Extensions.swift */; };
 		1DEA770F1F259ACE00C1040B /* SpotlightLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */; };
-		1DEA77331F259CE900C1040B /* SpotlightLyricsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */; };
-		1DEA77341F259CE900C1040B /* SpotlightLyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */; };
-		1DEA77371F259E3500C1040B /* SpotlightLyricsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */; };
-		1DEA77381F259E3500C1040B /* SpotlightLyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4A03F21F2B5AF400E7127D /* LyricsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsParser.swift; sourceTree = "<group>"; };
+		1D4A03F41F2B5B1900E7127D /* LyricsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsCell.swift; sourceTree = "<group>"; };
+		1D4A03F51F2B5B1900E7127D /* LyricsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LyricsCell.xib; sourceTree = "<group>"; };
+		1D4A03F61F2B5B1900E7127D /* LyricsCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsCellViewModel.swift; sourceTree = "<group>"; };
+		1D4A03F71F2B5B1900E7127D /* LyricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
+		1D4A03FC1F2B5B9F00E7127D /* LyricsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsItem.swift; sourceTree = "<group>"; };
+		1D4A03FE1F2B5BDA00E7127D /* LyricsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsHeader.swift; sourceTree = "<group>"; };
+		1D9B1F251F2B6EC700BD4C06 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1DEA77031F259A6C00C1040B /* SpotlightLyrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightLyrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEA77071F259A6C00C1040B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyrics.swift; sourceTree = "<group>"; };
-		1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsParser.swift; sourceTree = "<group>"; };
-		1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsView.swift; sourceTree = "<group>"; };
-		1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightLyricsCell.swift; sourceTree = "<group>"; };
-		1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotlightLyricsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4A03F01F2B5A2200E7127D /* LyricsParser */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A03F21F2B5AF400E7127D /* LyricsParser.swift */,
+				1D4A03FC1F2B5B9F00E7127D /* LyricsItem.swift */,
+				1D4A03FE1F2B5BDA00E7127D /* LyricsHeader.swift */,
+			);
+			path = LyricsParser;
+			sourceTree = "<group>";
+		};
+		1D4A03F11F2B5A4400E7127D /* LyricsView */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A03F41F2B5B1900E7127D /* LyricsCell.swift */,
+				1D4A03F51F2B5B1900E7127D /* LyricsCell.xib */,
+				1D4A03F61F2B5B1900E7127D /* LyricsCellViewModel.swift */,
+				1D4A03F71F2B5B1900E7127D /* LyricsView.swift */,
+			);
+			path = LyricsView;
+			sourceTree = "<group>";
+		};
 		1DEA76F91F259A6C00C1040B = {
 			isa = PBXGroup;
 			children = (
@@ -54,10 +83,9 @@
 		1DEA77051F259A6C00C1040B /* SpotlightLyrics */ = {
 			isa = PBXGroup;
 			children = (
-				1DEA77351F259E3500C1040B /* SpotlightLyricsCell.swift */,
-				1DEA77361F259E3500C1040B /* SpotlightLyricsCell.xib */,
-				1DEA77311F259CE900C1040B /* SpotlightLyricsParser.swift */,
-				1DEA77321F259CE900C1040B /* SpotlightLyricsView.swift */,
+				1D4A03F11F2B5A4400E7127D /* LyricsView */,
+				1D4A03F01F2B5A2200E7127D /* LyricsParser */,
+				1D9B1F251F2B6EC700BD4C06 /* Extensions.swift */,
 				1DEA770E1F259ACE00C1040B /* SpotlightLyrics.swift */,
 				1DEA77071F259A6C00C1040B /* Info.plist */,
 			);
@@ -133,7 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEA77381F259E3500C1040B /* SpotlightLyricsCell.xib in Resources */,
+				1D4A03F91F2B5B1900E7127D /* LyricsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEA77331F259CE900C1040B /* SpotlightLyricsParser.swift in Sources */,
-				1DEA77371F259E3500C1040B /* SpotlightLyricsCell.swift in Sources */,
-				1DEA77341F259CE900C1040B /* SpotlightLyricsView.swift in Sources */,
+				1D4A03FD1F2B5B9F00E7127D /* LyricsItem.swift in Sources */,
+				1D4A03FB1F2B5B1900E7127D /* LyricsView.swift in Sources */,
 				1DEA770F1F259ACE00C1040B /* SpotlightLyrics.swift in Sources */,
+				1D9B1F261F2B6EC700BD4C06 /* Extensions.swift in Sources */,
+				1D4A03F81F2B5B1900E7127D /* LyricsCell.swift in Sources */,
+				1D4A03FA1F2B5B1900E7127D /* LyricsCellViewModel.swift in Sources */,
+				1D4A03F31F2B5AF400E7127D /* LyricsParser.swift in Sources */,
+				1D4A03FF1F2B5BDA00E7127D /* LyricsHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +345,7 @@
 				1DEA770D1F259A6C00C1040B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
