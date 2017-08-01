@@ -108,6 +108,7 @@
 				TargetAttributes = {
 					1DEA77181F259B0300C1040B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5FXTNC5WLB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5FXTNC5WLB;
 				INFOPLIST_FILE = SpotlightLyrics_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayasme.SpotlightLyrics-Demo";
@@ -286,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5FXTNC5WLB;
 				INFOPLIST_FILE = SpotlightLyrics_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayasme.SpotlightLyrics-Demo";
@@ -313,6 +316,7 @@
 				1DEA772D1F259B0400C1040B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

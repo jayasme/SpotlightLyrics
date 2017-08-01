@@ -59,7 +59,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     }
     
     private func commonInit() {
-        register(UINib(nibName: "LyricsCell", bundle: nil), forCellReuseIdentifier: "LyricsCell")
+        register(LyricsCell.self, forCellReuseIdentifier: "LyricsCell")
         
         dataSource = self
         delegate = self

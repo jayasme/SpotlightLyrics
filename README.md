@@ -7,7 +7,6 @@
 ## Introducing
 SpotlightLyrics is a native component supports iOS and developed by Swift language.
 
-
 ## How to use
 
 * Download or clone the project from Github

@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import SpotlightLyrics
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var lyricsView: LyricsView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        lyricsView.lyrics = "dsddsdsd"
+        lyricsView.font = UIFont.systemFont(ofSize: 15)
+        lyricsView.textColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
