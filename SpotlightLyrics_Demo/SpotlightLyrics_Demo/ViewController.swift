@@ -12,6 +12,12 @@ import SpotlightLyrics
 class ViewController: UIViewController {
     
     @IBOutlet weak var lyricsView: LyricsView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    private var timer: Timer? = nil
+    
+    private var currentTimer: TimeInterval = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +45,48 @@ class ViewController: UIViewController {
         
         // Initialize the SpotlightLyrics view
         lyricsView.lyrics = lyrics
-        lyricsView.font = UIFont.systemFont(ofSize: 15)
+        lyricsView.font = UIFont.systemFont(ofSize: 13)
         lyricsView.textColor = UIColor.black
     }
+    
+    
+    @IBAction func onStartButtonPress() {
+        // unselected = stopped
+        // selected = playing
+        if (playButton.isSelected) {
+            stop()
+        } else {
+            play()
+        }
+    }
+    
+    
+    private func play() {
+        playButton.isSelected = true
+        
+        if (timer != nil) {
+            timer?.invalidate()
+            timer = nil
+        }
+        
+        currentTimer = 0
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (_) in
+            self.lyricsView.scroll(to: self.currentTimer, animated: true)
+            self.currentTimer += 0.2
+            self.timeLabel.text = String(self.currentTimer)
+        })
+    }
+    
+    private func stop() {
+        playButton.isSelected = false
+        
+        if (timer != nil) {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

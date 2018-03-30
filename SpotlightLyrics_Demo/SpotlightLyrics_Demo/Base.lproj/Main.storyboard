@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,20 +22,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsJ-kY-SL7" customClass="LyricsView" customModule="SpotlightLyrics">
-                                <rect key="frame" x="28" y="32" width="319" height="623"/>
+                                <rect key="frame" x="12" y="52" width="351" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-9S-bW6">
+                                <rect key="frame" x="0.0" y="20" width="247" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="hey-5a-AL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Start"/>
+                                <state key="highlighted" title="Stop"/>
+                                <connections>
+                                    <action selector="onStartButtonPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JR-Ev-MOJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5k-bp-6GP">
+                                <rect key="frame" x="247" y="29.5" width="128" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="DtW-tf-TlD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gsJ-kY-SL7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="Vub-2s-I5c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gsJ-kY-SL7" secondAttribute="trailing" constant="12" id="VvB-YL-Hl1"/>
-                            <constraint firstItem="gsJ-kY-SL7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="hfh-21-zKg"/>
+                            <constraint firstItem="z5k-bp-6GP" firstAttribute="centerY" secondItem="q0F-9S-bW6" secondAttribute="centerY" id="8G9-nt-Kr3"/>
+                            <constraint firstItem="gsJ-kY-SL7" firstAttribute="top" secondItem="q0F-9S-bW6" secondAttribute="bottom" id="Epd-Uc-38W"/>
+                            <constraint firstItem="q0F-9S-bW6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TK2-I8-avE"/>
+                            <constraint firstAttribute="trailing" secondItem="gsJ-kY-SL7" secondAttribute="trailing" constant="12" id="VvB-YL-Hl1"/>
+                            <constraint firstItem="q0F-9S-bW6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cwA-sZ-wsb"/>
+                            <constraint firstItem="z5k-bp-6GP" firstAttribute="leading" secondItem="q0F-9S-bW6" secondAttribute="trailing" id="dFy-eZ-XOK"/>
+                            <constraint firstItem="gsJ-kY-SL7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="hfh-21-zKg"/>
+                            <constraint firstAttribute="trailing" secondItem="z5k-bp-6GP" secondAttribute="trailing" id="pHV-bh-TPN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gsJ-kY-SL7" secondAttribute="bottom" constant="12" id="xak-2z-Jei"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lyricsView" destination="gsJ-kY-SL7" id="JCJ-f2-1uf"/>
+                        <outlet property="playButton" destination="q0F-9S-bW6" id="FEX-SW-Bzo"/>
+                        <outlet property="timeLabel" destination="z5k-bp-6GP" id="7XG-mb-VEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
