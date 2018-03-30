@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5D30E5206E39A00013AE6A /* Santa Monica Dream.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D30E4206E39A00013AE6A /* Santa Monica Dream.lrc */; };
 		1DEA771D1F259B0300C1040B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA771C1F259B0300C1040B /* AppDelegate.swift */; };
 		1DEA771F1F259B0300C1040B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA771E1F259B0300C1040B /* ViewController.swift */; };
 		1DEA77221F259B0300C1040B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA77201F259B0300C1040B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D5D30E4206E39A00013AE6A /* Santa Monica Dream.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Santa Monica Dream.lrc"; sourceTree = "<group>"; };
 		1DEA77191F259B0300C1040B /* SpotlightLyrics_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotlightLyrics_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEA771C1F259B0300C1040B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DEA771E1F259B0300C1040B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		1DEA771B1F259B0300C1040B /* SpotlightLyrics_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1D5D30E4206E39A00013AE6A /* Santa Monica Dream.lrc */,
 				1DEA771C1F259B0300C1040B /* AppDelegate.swift */,
 				1DEA771E1F259B0300C1040B /* ViewController.swift */,
 				1DEA77201F259B0300C1040B /* Main.storyboard */,
@@ -108,7 +111,7 @@
 				TargetAttributes = {
 					1DEA77181F259B0300C1040B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5FXTNC5WLB;
+						DevelopmentTeam = E96QQ86H67;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D5D30E5206E39A00013AE6A /* Santa Monica Dream.lrc in Resources */,
 				1DEA77271F259B0300C1040B /* LaunchScreen.storyboard in Resources */,
 				1DEA77241F259B0300C1040B /* Assets.xcassets in Resources */,
 				1DEA77221F259B0300C1040B /* Main.storyboard in Resources */,
@@ -275,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5FXTNC5WLB;
+				DEVELOPMENT_TEAM = E96QQ86H67;
 				INFOPLIST_FILE = SpotlightLyrics_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayasme.SpotlightLyrics-Demo";
@@ -288,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5FXTNC5WLB;
+				DEVELOPMENT_TEAM = E96QQ86H67;
 				INFOPLIST_FILE = SpotlightLyrics_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayasme.SpotlightLyrics-Demo";
