@@ -59,7 +59,8 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     }
     
     private func commonInit() {
-        register(LyricsCell.self, forCellReuseIdentifier: "LyricsCell")
+        register(LyricsCell.defaultNib(), forCellReuseIdentifier: "LyricsCell")
+        separatorStyle = .none
         
         dataSource = self
         delegate = self
@@ -72,11 +73,11 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 52
+        return 24
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.dequeueReusableCell(withIdentifier: "LyricsCell", for: indexPath) as! LyricsCell
+        let cell = dequeueReusableCell(withIdentifier: "LyricsCell", for: indexPath) as! LyricsCell
         cell.update(with: lyricsViewModels[indexPath.row])
         return cell
     }
@@ -92,6 +93,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     private func reloadViewModels() {
         parser = LyricsParser(lyrics: lyrics)
         
+        lyricsViewModels.removeAll()
         for lyric in parser!.lyrics {
             lyricsViewModels.append(LyricsCellViewModel.cellViewModel(lyric: lyric.lyric, font: font, textColor: textColor))
         }

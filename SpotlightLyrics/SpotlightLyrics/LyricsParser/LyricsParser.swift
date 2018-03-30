@@ -53,29 +53,31 @@ public class LyricsParser {
         // parse header into lyrics
         // insert header distribute by averge time intervals
         if self.lyrics.count > 0 {
-            let headerCount =
-                    (header.title == nil ? 0 : 1) +
-                    (header.author == nil ? 0 : 1) +
-                    (header.album == nil ? 0 : 1) +
-                    (header.by == nil ? 0 : 1) +
-                    (header.editor == nil ? 0 : 1)
-            
-            let intervalPerHeader = self.lyrics[0].time / TimeInterval(headerCount)
+            var headers: [String] = []
             if let title = header.title {
-                self.lyrics.insert(LyricsItem(time: 0, lyric: title), at: 0)
+                headers.append(title)
             }
             if let author = header.author {
-                self.lyrics.insert(LyricsItem(time: intervalPerHeader, lyric: author), at: 1)
+                headers.append(author)
             }
             if let album = header.album {
-                self.lyrics.insert(LyricsItem(time: intervalPerHeader * 2, lyric: album), at: 2)
+                headers.append(album)
             }
             if let by = header.by {
-                self.lyrics.insert(LyricsItem(time: intervalPerHeader * 3, lyric: by), at: 3)
+                headers.append(by)
             }
             if let editor = header.editor {
-                self.lyrics.insert(LyricsItem(time: intervalPerHeader * 4, lyric: editor), at: 4)
+                headers.append(editor)
             }
+            
+            let intervalPerHeader = self.lyrics[0].time / TimeInterval(headers.count)
+            
+            var headerLyrics: [LyricsItem] = headers.enumerated().map { LyricsItem(time: intervalPerHeader * TimeInterval($0.offset), lyric: $0.element) }
+            if (headerLyrics.count > 0) {
+                headerLyrics.append(LyricsItem(time: intervalPerHeader * TimeInterval(headerLyrics.count), lyric: ""))
+            }
+            
+            self.lyrics.insert(contentsOf: headerLyrics, at: 0)
         }
         
     }
@@ -119,7 +121,7 @@ public class LyricsParser {
     
     private func parseHeader(prefix: String, line: String) -> String? {
         if line.hasPrefix("[" + prefix + ":") && line.hasSuffix("]") {
-            let startIndex = line.index(line.startIndex, offsetBy: prefix.length + 2)
+            let startIndex = line.index(line.startIndex, offsetBy: prefix.count + 2)
             let endIndex = line.index(line.endIndex, offsetBy: -1)
             return line.substring(with: startIndex..<endIndex)
         } else {

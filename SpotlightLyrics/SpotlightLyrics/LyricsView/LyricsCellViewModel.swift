@@ -20,9 +20,21 @@ public class LyricsCellViewModel {
         self.textColor = textColor
     }
     
-    public var lyric: String
-    public var font: UIFont
-    public var textColor: UIColor
+    public var lyric: String {
+        didSet {
+            cell?.textLabel?.text = lyric
+        }
+    }
+    public var font: UIFont {
+        didSet {
+            cell?.textLabel?.font = font
+        }
+    }
+    public var textColor: UIColor {
+        didSet {
+            cell?.textLabel?.textColor = textColor
+        }
+    }
     public var highlighted: Bool = false {
         didSet {
             cell?.isHighlighted = highlighted
