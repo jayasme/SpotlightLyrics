@@ -2,6 +2,8 @@
 
 ---
 
+![SpotlightLyrics](cover.png "SpotlightLyrics")
+
 ## NOTICE: Still working in progress.
 
 ## Introducing
