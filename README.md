@@ -10,8 +10,10 @@
 `SpotlightLyrics` is a component which helps developers parsing & displaying [LRC files](https://en.wikipedia.org/wiki/LRC_(file_format)), it was completely developed under [Swift](https://github.com/Apple/Swift) language and designed for the `iOS` platform.
 
 <figure class="half">
-    ![Screenshot](resources/screenshot1.png "Screenshot")
-    ![Screenshot](resources/screenshot2.png "Screenshot")
+
+![Screenshot](resources/screenshot1.png "Screenshot")
+![Screenshot](resources/screenshot2.png "Screenshot")
+
 </figure>
 
 ## How to use
@@ -47,6 +49,7 @@ import SpotlightLyrics
 
 let lyricsView = LyricsView()
 lyricsView.frame = self.view.bounds
+self.view.addSubView(lyricsView)
 
 lyricsView.lyrics = lyricsString
 lyricsView.font = UIFont.systemFont(ofSize: 13)
@@ -55,6 +58,8 @@ lyricsView.textColor = UIColor.black
 // Scroll to the TimeInterval you want to highlight
 lyricsView.scroll(to: 20, animated: true)
 ```
+
+Also you can still add the `LyaricsView` by operating `XIB` files.
 
 ## Contributing
 Due to the repository is still under developing, the issues, defects or bugs you noticed could be already known by the author and the solution is on the way or not. However, if you volunteerly participate the project, any issue or pull request is very greateful.
@@ -67,5 +72,5 @@ Due to the repository is still under developing, the issues, defects or bugs you
 ## License
 SpotlightLyrics is [MIT licensed](LICENSE).
 
-## Anything else?
+## And also
 Thank you!
