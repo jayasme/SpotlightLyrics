@@ -17,7 +17,13 @@ class ViewController: UIViewController {
     
     private var timer: Timer? = nil
     
-    private var currentTimer: TimeInterval = 0
+    private var currentTime: TimeInterval = 0
+    
+    private let totalDuration: TimeInterval = 332
+    
+    private var currentTimeString: String {
+        return String(format: "%.1fs / %.1fs", ceil(currentTime * 10) / 10, totalDuration)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,8 @@ class ViewController: UIViewController {
         lyricsView.lyrics = lyrics
         lyricsView.font = UIFont.systemFont(ofSize: 13)
         lyricsView.textColor = UIColor.black
+        
+        timeLabel.text = currentTimeString
     }
     
     
@@ -60,7 +68,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     private func play() {
         playButton.isSelected = true
         
@@ -69,17 +76,23 @@ class ViewController: UIViewController {
             timer = nil
         }
         
-        currentTimer = 0
+        currentTime = 100
+        lyricsView.scroll(to: currentTime, animated: true)
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (_) in
-            self.lyricsView.scroll(to: self.currentTimer, animated: true)
-            self.currentTimer += 0.2
-            self.timeLabel.text = String(self.currentTimer)
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (_) in
+            self.lyricsView.scroll(to: self.currentTime, animated: true)
+            self.currentTime += 0.5
+            if (self.currentTime >= self.totalDuration) {
+                self.stop()
+            }
+            self.timeLabel.text = self.currentTimeString
         })
     }
     
     private func stop() {
         playButton.isSelected = false
+        self.currentTime = 0
+        timeLabel.text = currentTimeString
         
         if (timer != nil) {
             timer?.invalidate()

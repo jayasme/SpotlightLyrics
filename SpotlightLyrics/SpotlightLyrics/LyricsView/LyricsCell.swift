@@ -27,6 +27,7 @@ public class LyricsCell: UITableViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = nil
+        selectionStyle = .none
     }
     
     public func update(with viewModel: LyricsCellViewModel) {

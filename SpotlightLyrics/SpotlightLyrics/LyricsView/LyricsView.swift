@@ -61,6 +61,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     private func commonInit() {
         register(LyricsCell.defaultNib(), forCellReuseIdentifier: "LyricsCell")
         separatorStyle = .none
+        clipsToBounds = true
         
         dataSource = self
         delegate = self

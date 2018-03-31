@@ -54,9 +54,11 @@ public class LyricsParser {
         // insert header distribute by averge time intervals
         if self.lyrics.count > 0 {
             var headers: [String] = []
+            
             if let title = header.title {
                 headers.append(title)
             }
+            
             if let author = header.author {
                 headers.append(author)
             }
