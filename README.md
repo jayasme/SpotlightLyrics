@@ -4,9 +4,11 @@
 
 ![SpotlightLyrics](resources/cover.png 'SpotlightLyrics')
 
+中文说明请点击[这里](README.zh-CN.md)
+
 ## Introducing
 
-`SpotlightLyrics` is a component which helps developers parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it was completely developed under [Swift](https://github.com/Apple/Swift) and designed for both iPhone and iPad platform.
+`SpotlightLyrics` is a open-source component which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it was completely developed under [Swift](https://github.com/Apple/Swift) and designed for both iPhone and iPad platforms.
 
 <figure class="half">
 
@@ -17,21 +19,21 @@
 
 ## How to integrate
 
-### Using cocoapods
+### Cocoapods
 
 ```
 pod 'SpotlightLyrics'
 ```
 
-### Intergrate manually
+### Manually
 
-- Download or clone the repository
-- Copy `SpotlightLyrics.framework` from frameworks folder to the your project
+- Download or clone the repository,
+- Copy `SpotlightLyrics.framework` from frameworks folder to the your project,
 - Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
 
-To import the `SpotlightLyrics`, just import the `SpotlightLyrics` library in your code as usual.
-
 ## Using
+
+To import the `SpotlightLyrics`, just import the `SpotlightLyrics` library in your code as usual.
 
 ```Swift
 import SpotlightLyrics
@@ -72,11 +74,11 @@ lyricsView.textColor = UIColor.black
 lyricsView.scroll(to: 20, animated: true)
 ```
 
-I uploaded a demo for the repository, check it at https://github.com/jayasme/SpotlightLyrics_Demo
+I have uploaded a DEMO for the repository, check it at https://github.com/jayasme/SpotlightLyrics_Demo
 
 ## Contributing
 
-I am welcoming anyone who wants to contribute with the repository, if you have any good idea or problem with the repository, please establish an PR or issue.
+I am welcoming anyone who wants to contribute with the repository, if you have any good idea or problem with the repository, please establish PR or issues.
 
 ## License
 
