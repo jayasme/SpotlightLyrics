@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
    s.name = 'SpotlightLyrics'
-   s.version = '0.1.0'
+   s.version = '0.1.1'
    s.license = 'MIT'
    s.summary = 'A private foundation only for jayasme.'
    s.homepage = 'https://github.com/jayasme/SpotlightLyrics'
