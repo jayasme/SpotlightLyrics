@@ -64,13 +64,8 @@ Also you can still add the `LyaricsView` by operating `XIB` files.
 ## Contributing
 Due to the repository is still under developing, the issues, defects or bugs you noticed could be already known by the author and the solution is on the way or not. However, if you volunteerly participate the project, any issue or pull request is very greateful.
 
-## Roadmap
-* Finish the job
-* Upload the repository to `Cocoapods`
-* Keep accepting issues & pull requests to improve the repository.
-
 ## License
-SpotlightLyrics is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).
 
 ## And also
 Thank you!
