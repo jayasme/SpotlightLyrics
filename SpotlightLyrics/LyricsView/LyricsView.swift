@@ -59,7 +59,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     }
     
     private func commonInit() {
-        register(LyricsCell.defaultNib(), forCellReuseIdentifier: "LyricsCell")
+        register(LyricsCell.self, forCellReuseIdentifier: "LyricsCell")
         separatorStyle = .none
         clipsToBounds = true
         
