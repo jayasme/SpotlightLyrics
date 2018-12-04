@@ -2,31 +2,43 @@
 
 ---
 
-## WARNING: This repository is still under developing!
-
-![SpotlightLyrics](resources/cover.png "SpotlightLyrics")
+![SpotlightLyrics](resources/cover.png 'SpotlightLyrics')
 
 ## Introducing
-`SpotlightLyrics` is a component which helps developers parsing & displaying [LRC files](https://en.wikipedia.org/wiki/LRC_(file_format)), it was completely developed under [Swift](https://github.com/Apple/Swift) language and designed for the `iOS` platform.
+
+`SpotlightLyrics` is a component which helps developers parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it was completely developed under [Swift](https://github.com/Apple/Swift) and designed for both iPhone and iPad platform.
 
 <figure class="half">
 
-![Screenshot](resources/screenshot1.png "Screenshot")
-![Screenshot](resources/screenshot2.png "Screenshot")
+![Screenshot](resources/screenshot1.png 'Screenshot')
+![Screenshot](resources/screenshot2.png 'Screenshot')
 
 </figure>
 
-## How to use
-* Download or clone the repository to your local
-* Copy `SpotlightLyrics.framework` from frameworks folder to the your project
-* Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
+## How to integrate
 
-To import the `SpotlightLyrics`, just import the `SpotlightLyrics`  library in your code as usual.
+### Using cocoapods
+
+```
+pod 'SpotlightLyrics'
+```
+
+### Intergrate manually
+
+- Download or clone the repository
+- Copy `SpotlightLyrics.framework` from frameworks folder to the your project
+- Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
+
+To import the `SpotlightLyrics`, just import the `SpotlightLyrics` library in your code as usual.
+
+## Using
+
 ```Swift
 import SpotlightLyrics
 ```
 
 To parse the LRC file only, just use `LyricsParser` class, do the following
+
 ```Swift
 import SpotlightLyrics
 
@@ -42,6 +54,7 @@ print(parser.lyrics[0].time)
 ```
 
 To display the lyrics in your view or controller, do the following
+
 ```Swift
 import SpotlightLyrics
 
@@ -59,13 +72,12 @@ lyricsView.textColor = UIColor.black
 lyricsView.scroll(to: 20, animated: true)
 ```
 
-Also you can still add the `LyaricsView` by operating `XIB` files.
+I uploaded a demo for the repository, check it at https://github.com/jayasme/SpotlightLyrics_Demo
 
 ## Contributing
-Due to the repository is still under developing, the issues, defects or bugs you noticed could be already known by the author and the solution is on the way or not. However, if you volunteerly participate the project, any issue or pull request is very greateful.
+
+I am welcoming anyone who wants to contribute with the repository, if you have any good idea or problem with the repository, please establish an PR or issue.
 
 ## License
-[MIT licensed](LICENSE).
 
-## And also
-Thank you!
+[MIT licensed](LICENSE).
