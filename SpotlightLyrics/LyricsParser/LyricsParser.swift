@@ -125,7 +125,7 @@ public class LyricsParser {
         if line.hasPrefix("[" + prefix + ":") && line.hasSuffix("]") {
             let startIndex = line.index(line.startIndex, offsetBy: prefix.count + 2)
             let endIndex = line.index(line.endIndex, offsetBy: -1)
-            return line.substring(with: startIndex..<endIndex)
+            return String(line[startIndex..<endIndex])
         } else {
             return nil
         }
@@ -141,7 +141,7 @@ public class LyricsParser {
             
             let startIndex = cLine.index(cLine.startIndex, offsetBy: 1)
             let endIndex = cLine.index(closureIndex, offsetBy: -1)
-            let amidString = cLine.substring(with: startIndex..<endIndex)
+            let amidString = String(cLine[startIndex..<endIndex])
             
             let amidStrings = amidString.components(separatedBy: ":")
             var hour:TimeInterval = 0

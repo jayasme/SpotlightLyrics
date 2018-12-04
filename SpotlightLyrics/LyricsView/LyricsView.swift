@@ -48,7 +48,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         }
     }
     
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         commonInit()
     }
