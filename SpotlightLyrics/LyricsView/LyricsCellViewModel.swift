@@ -14,7 +14,7 @@ internal class LyricsCellViewModel {
     
     public var lyric: String {
         didSet {
-            cell?.textLabel?.text = lyric
+            cell?.update(with: self)
         }
     }
     
@@ -44,7 +44,7 @@ internal class LyricsCellViewModel {
     
     public var highlighted: Bool = false {
         didSet {
-            cell?.update(with: self)
+            cell?.isHighlighted = highlighted
         }
     }
     

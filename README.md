@@ -25,7 +25,7 @@ pod 'SpotlightLyrics'
 
 ### Manually
 
-- Download or clone the repository,
+- Download or clone the repository and then compile it to obtain `SpotlightLyrics.framework`,
 - Copy `SpotlightLyrics.framework` from frameworks folder to the your project,
 - Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
 
@@ -79,17 +79,21 @@ Also, please check the [Demo](https://github.com/jayasme/SpotlightLyrics_Demo)
 
 `LyricsView` supports the following properties to allow you to make it up.
 
-| Property Name        | Type    | Default Value  | Description                              |
-| -------------------- | ------- | -------------- | ---------------------------------------- |
-| textColor            | UIColor | LightGray      | The color of the unhighlighted lyrics    |
-| highlightedTextColor | UIColor | Black          | The color of the highlighted lyrics      |
-| font                 | UIFont  | System 16      | The font of the unhighlighted lyrics     |
-| highlightedFont      | UIFont  | System 16 Bold | The font color of the highlighted lyrics |
-| lineSpacing          | CGFloat | 16             | The spacing of each lyric lines          |
+| Property Name             | Type    | Default Value  | Description                              |
+| ------------------------- | ------- | -------------- | ---------------------------------------- |
+| lyricTextColor            | UIColor | LightGray      | The color of the unhighlighted lyrics    |
+| lyricHighlightedTextColor | UIColor | Black          | The color of the highlighted lyrics      |
+| lyricFont                 | UIFont  | System 16      | The font of the unhighlighted lyrics     |
+| lyricHighlightedFont      | UIFont  | System 16 Bold | The font color of the highlighted lyrics |
+| lineSpacing               | CGFloat | 16             | The spacing of each lyric lines          |
+
+## Objective-C compatibility
+
+This respository hasn't been tested under Objective-C environment in any way.
 
 ## Contributing
 
-I am welcoming anyone who wants to contribute with the repository, if you have any good idea or problem with the repository, please establish PR or issues.
+Any contribution is welcomed, please post PR or report issue if you have any good idea or encounter any problem. Thank you!
 
 ## License
 

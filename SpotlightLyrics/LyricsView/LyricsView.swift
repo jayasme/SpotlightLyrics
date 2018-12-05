@@ -32,37 +32,31 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         }
     }
     
-    public var lyrics: String! {
+    public var lyrics: String? = nil {
         didSet {
             reloadViewModels()
         }
     }
     
-    public var font: UIFont = .systemFont(ofSize: 16) {
+    public var lyricFont: UIFont = .systemFont(ofSize: 16) {
         didSet {
             reloadViewModels()
         }
     }
     
-    public var highlightedFont: UIFont = .systemFont(ofSize: 16) {
+    public var lyricHighlightedFont: UIFont = .systemFont(ofSize: 16) {
         didSet {
             reloadViewModels()
         }
     }
     
-    public var textColor: UIColor = .black {
+    public var lyricTextColor: UIColor = .black {
         didSet {
             reloadViewModels()
         }
     }
     
-    public var highlightedTextColor: UIColor = .lightGray {
-        didSet {
-            reloadViewModels()
-        }
-    }
-    
-    public var highlightedBackgroundView: UIView? = nil {
+    public var lyricHighlightedTextColor: UIColor = .lightGray {
         didSet {
             reloadViewModels()
         }
@@ -120,11 +114,22 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     // MARK:
     
     private func reloadViewModels() {
+        lyricsViewModels.removeAll()
+        
+        guard let lyrics = self.lyrics?.emptyToNil() else {
+            reloadData()
+            return
+        }
+        
         parser = LyricsParser(lyrics: lyrics)
         
-        lyricsViewModels.removeAll()
         for lyric in parser!.lyrics {
-            let viewModel = LyricsCellViewModel.cellViewModel(lyric: lyric.lyric, font: font, highlightedFont: highlightedFont, textColor: textColor, highlightedTextColor: highlightedTextColor)
+            let viewModel = LyricsCellViewModel.cellViewModel(lyric: lyric.lyric,
+                                                              font: lyricFont,
+                                                              highlightedFont: lyricHighlightedFont,
+                                                              textColor: lyricTextColor,
+                                                              highlightedTextColor: lyricHighlightedTextColor
+            )
             lyricsViewModels.append(viewModel)
         }
         reloadData()

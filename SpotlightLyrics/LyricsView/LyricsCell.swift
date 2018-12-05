@@ -50,11 +50,10 @@ internal class LyricsCell: UITableViewCell {
             return
         }
         
-        lyricLabel.text =  viewModel.lyric
+        lyricLabel.text = viewModel.lyric
         lyricLabel.font = isHighlighted ? viewModel.highlightedFont : viewModel.font
         lyricLabel.textColor = isHighlighted ? viewModel.highlightedTextColor : viewModel.textColor
         lyricLabel.sizeThatFits(CGSize(width: bounds.width, height: bounds.height))
-        isHighlighted = viewModel.highlighted
         
         viewModel.cell = self
     }
