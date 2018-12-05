@@ -62,6 +62,21 @@ internal class LyricsCellViewModel {
         self.highlightedFont = highlightedFont
         self.textColor = textColor
         self.highlightedTextColor = highlightedTextColor
+        // produce the attributedString
+        attributedString = NSAttributedString(string: lyric, attributes: [.font: font])
+        highlightedAttributedString = NSAttributedString(string: lyric, attributes: [.font: highlightedFont])
+    }
+    
+    private var attributedString: NSAttributedString? = nil
+    private var highlightedAttributedString: NSAttributedString? = nil
+    
+    public func calcHeight(containerWidth: CGFloat) -> CGFloat {
+        let boundingSize = CGSize(width: containerWidth, height: 9999)
+        if (highlighted) {
+            return highlightedAttributedString?.boundingRect(with: boundingSize, options: .usesLineFragmentOrigin, context: nil).height ?? 0
+        } else {
+            return attributedString?.boundingRect(with: boundingSize, options: .usesLineFragmentOrigin, context: nil).height ?? 0
+        }
     }
     
     internal weak var cell: LyricsCell? = nil

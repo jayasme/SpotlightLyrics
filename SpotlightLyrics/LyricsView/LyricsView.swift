@@ -96,7 +96,8 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 24
+        let cellViewModel = self.lyricsViewModels[indexPath.row]
+        return lineSpacing + cellViewModel.calcHeight(containerWidth: self.bounds.width)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
