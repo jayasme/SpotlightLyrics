@@ -17,6 +17,8 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
     
     private var lastIndex: Int? = nil
     
+    // MARK: Public properties
+    
     public var currentLyric: String? {
         get {
             guard let lastIndex = lastIndex else {
@@ -42,11 +44,37 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         }
     }
     
+    public var highlightedFont: UIFont = .systemFont(ofSize: 16) {
+        didSet {
+            reloadViewModels()
+        }
+    }
+    
     public var textColor: UIColor = .black {
         didSet {
             reloadViewModels()
         }
     }
+    
+    public var highlightedTextColor: UIColor = .lightGray {
+        didSet {
+            reloadViewModels()
+        }
+    }
+    
+    public var highlightedBackgroundView: UIView? = nil {
+        didSet {
+            reloadViewModels()
+        }
+    }
+    
+    public var lineSpacing: CGFloat = 16 {
+        didSet {
+            reloadViewModels()
+        }
+    }
+    
+    // Initializations
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -96,13 +124,14 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         
         lyricsViewModels.removeAll()
         for lyric in parser!.lyrics {
-            lyricsViewModels.append(LyricsCellViewModel.cellViewModel(lyric: lyric.lyric, font: font, textColor: textColor))
+            let viewModel = LyricsCellViewModel.cellViewModel(lyric: lyric.lyric, font: font, highlightedFont: highlightedFont, textColor: textColor, highlightedTextColor: highlightedTextColor)
+            lyricsViewModels.append(viewModel)
         }
         reloadData()
         contentInset = UIEdgeInsets(top: frame.height / 2, left: 0, bottom: frame.height / 2, right: 0)
     }
     
-    public func scroll(to time: TimeInterval, animated: Bool) {
+    public func scroll(toTime time: TimeInterval, animated: Bool) {
         guard let lyrics = parser?.lyrics else {
             return
         }

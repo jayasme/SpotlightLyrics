@@ -63,8 +63,8 @@
 		1D079FD021B6608F00D21A8F /* LyricsView */ = {
 			isa = PBXGroup;
 			children = (
-				1D079FD121B6608F00D21A8F /* LyricsCellViewModel.swift */,
 				1D079FD221B6608F00D21A8F /* LyricsView.swift */,
+				1D079FD121B6608F00D21A8F /* LyricsCellViewModel.swift */,
 				1D079FD321B6608F00D21A8F /* LyricsCell.swift */,
 			);
 			path = LyricsView;

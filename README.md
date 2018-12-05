@@ -1,8 +1,6 @@
-# SpotlightLyrics
+![SpotlightLyrics](resources/cover.png 'SpotlightLyrics')
 
 ---
-
-![SpotlightLyrics](resources/cover.png 'SpotlightLyrics')
 
 中文说明请点击[这里](README.zh-CN.md)
 
@@ -31,7 +29,7 @@ pod 'SpotlightLyrics'
 - Copy `SpotlightLyrics.framework` from frameworks folder to the your project,
 - Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
 
-## Using
+## How to use
 
 To import the `SpotlightLyrics`, just import the `SpotlightLyrics` library in your code as usual.
 
@@ -70,11 +68,24 @@ lyricsView.lyrics = lyricsString
 lyricsView.font = UIFont.systemFont(ofSize: 13)
 lyricsView.textColor = UIColor.black
 
-// Scroll to the TimeInterval you want to highlight
-lyricsView.scroll(to: 20, animated: true)
+// Scroll to the eplased time you want to highlight
+// You need to call this function uninterruptedly with your own thread or timer so that make it scroll.
+lyricsView.scroll(toTime: 20, animated: true)
 ```
 
-I have uploaded a DEMO for the repository, check it at https://github.com/jayasme/SpotlightLyrics_Demo
+Also, please check the [Demo](https://github.com/jayasme/SpotlightLyrics_Demo)
+
+### Stylish
+
+`LyricsView` supports the following properties to allow you to make it up.
+
+| Property Name        | Type    | Default Value  | Description                              |
+| -------------------- | ------- | -------------- | ---------------------------------------- |
+| textColor            | UIColor | LightGray      | The color of the unhighlighted lyrics    |
+| highlightedTextColor | UIColor | Black          | The color of the highlighted lyrics      |
+| font                 | UIFont  | System 16      | The font of the unhighlighted lyrics     |
+| highlightedFont      | UIFont  | System 16 Bold | The font color of the highlighted lyrics |
+| lineSpacing          | CGFloat | 16             | The spacing of each lyric lines          |
 
 ## Contributing
 

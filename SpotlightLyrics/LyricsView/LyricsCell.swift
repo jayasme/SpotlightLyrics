@@ -9,7 +9,7 @@
 import UIKit
 
 
-public class LyricsCell: UITableViewCell {
+internal class LyricsCell: UITableViewCell {
     
     private var lyricLabel: UILabel!
     
@@ -25,6 +25,8 @@ public class LyricsCell: UITableViewCell {
     
     private func commitInit() {
         lyricLabel = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height))
+        lyricLabel.textAlignment = .center
+        selectionStyle = .none
         contentView.addSubview(lyricLabel)
     }
     
@@ -35,22 +37,27 @@ public class LyricsCell: UITableViewCell {
     
     public override var isHighlighted: Bool {
         didSet {
-            lyricLabel.alpha = isHighlighted ? 1 : 0.4
+            applyViewModel()
         }
     }
     
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        backgroundColor = nil
-        selectionStyle = .none
+    public func update(with viewModel: LyricsCellViewModel) {
+        self.viewModel = viewModel
     }
     
-    public func update(with viewModel: LyricsCellViewModel) {
-        lyricLabel.text = viewModel.lyric
-        lyricLabel.font = viewModel.font
-        lyricLabel.textColor = viewModel.textColor
+    private func applyViewModel() {
+        guard let viewModel = self.viewModel else {
+            return
+        }
+        
+        lyricLabel.text =  viewModel.lyric
+        lyricLabel.font = isHighlighted ? viewModel.highlightedFont : viewModel.font
+        lyricLabel.textColor = isHighlighted ? viewModel.highlightedTextColor : viewModel.textColor
         lyricLabel.sizeThatFits(CGSize(width: bounds.width, height: bounds.height))
         isHighlighted = viewModel.highlighted
+        
         viewModel.cell = self
     }
+    
+    private weak var viewModel : LyricsCellViewModel? = nil
 }
