@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
    s.name = 'SpotlightLyrics'
-   s.version = '0.1.2'
+   s.version = '0.1.3'
    s.license = 'MIT'
-   s.summary = 'A private foundation only for jayasme.'
+   s.summary = 'An LRC file parser for iOS.'
    s.homepage = 'https://github.com/jayasme/SpotlightLyrics'
    # s.social_media_url = ''
    s.authors = { 'jayasme' => 'sunshine121981@126.com' }
