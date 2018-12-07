@@ -2,6 +2,8 @@
 
 ---
 
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/SpotlightLyrics.svg)](https://cocoapods.org/pods/SpotlightLyrics)
+
 For English descriptions, click [here](README.md)
 
 ## 介绍

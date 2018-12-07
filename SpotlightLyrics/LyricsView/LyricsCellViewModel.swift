@@ -14,31 +14,31 @@ internal class LyricsCellViewModel {
     
     public var lyric: String {
         didSet {
-            cell?.update(with: self)
+            update()
         }
     }
     
     public var font: UIFont {
         didSet {
-            cell?.update(with: self)
+            update()
         }
     }
     
     public var highlightedFont: UIFont {
         didSet {
-            cell?.update(with: self)
+            update()
         }
     }
     
     public var textColor: UIColor {
         didSet {
-            cell?.update(with: self)
+            update()
         }
     }
     
     public var highlightedTextColor: UIColor {
         didSet {
-            cell?.update(with: self)
+            update()
         }
     }
     
@@ -48,7 +48,7 @@ internal class LyricsCellViewModel {
         }
     }
     
-    public static func cellViewModel(lyric: String, font: UIFont, highlightedFont: UIFont, textColor: UIColor, highlightedTextColor: UIColor) -> LyricsCellViewModel{
+    public static func cellViewModel(lyric: String, font: UIFont, highlightedFont: UIFont, textColor: UIColor, highlightedTextColor: UIColor) -> LyricsCellViewModel {
         return LyricsCellViewModel(lyric: lyric,
                                    font: font,
                                    highlightedFont: highlightedFont,
@@ -62,13 +62,18 @@ internal class LyricsCellViewModel {
         self.highlightedFont = highlightedFont
         self.textColor = textColor
         self.highlightedTextColor = highlightedTextColor
+        update()
+    }
+    
+    private func update() {
         // produce the attributedString
         attributedString = NSAttributedString(string: lyric, attributes: [.font: font])
         highlightedAttributedString = NSAttributedString(string: lyric, attributes: [.font: highlightedFont])
+        cell?.update(with: self)
     }
     
-    private var attributedString: NSAttributedString? = nil
-    private var highlightedAttributedString: NSAttributedString? = nil
+    public var attributedString: NSAttributedString? = nil
+    public var highlightedAttributedString: NSAttributedString? = nil
     
     public func calcHeight(containerWidth: CGFloat) -> CGFloat {
         let boundingSize = CGSize(width: containerWidth, height: 9999)

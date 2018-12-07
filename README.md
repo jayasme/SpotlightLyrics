@@ -2,11 +2,13 @@
 
 ---
 
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/SpotlightLyrics.svg)](https://cocoapods.org/pods/SpotlightLyrics)
+
 中文说明请点击[这里](README.zh-CN.md)
 
 ## Introducing
 
-`SpotlightLyrics` is a open-source component which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it was completely developed under [Swift](https://github.com/Apple/Swift) and designed for both iPhone and iPad platforms.
+`SpotlightLyrics` is an open-source component which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it is completely developed under [Swift](https://github.com/Apple/Swift) 4.2 and designed for both iPhone and iPad platforms.
 
 <figure class="half">
 
