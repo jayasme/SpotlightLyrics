@@ -1,21 +1,23 @@
 //
 //  LyricsView.swift
-//  ONFoundation
+//  SpotlightLyrics
 //
 //  Created by Scott Rong on 2017/4/2.
-//  Copyright © 2017年 on. All rights reserved.
+//  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
 import UIKit
 
 
-public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate {
+open class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     private var parser: LyricsParser? = nil
     
     private var lyricsViewModels: [LyricsCellViewModel] = []
     
     private var lastIndex: Int? = nil
+    
+    private(set) public var timer: LyricsViewTimer = LyricsViewTimer()
     
     // MARK: Public properties
     
@@ -68,7 +70,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         }
     }
     
-    // Initializations
+    // MARK: Initializations
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -87,6 +89,8 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         
         dataSource = self
         delegate = self
+        
+        timer.lyricsView = self
     }
     
     // MARK: UITableViewDataSource
@@ -125,7 +129,7 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         parser = LyricsParser(lyrics: lyrics)
         
         for lyric in parser!.lyrics {
-            let viewModel = LyricsCellViewModel.cellViewModel(lyric: lyric.lyric,
+            let viewModel = LyricsCellViewModel.cellViewModel(lyric: lyric.text,
                                                               font: lyricFont,
                                                               highlightedFont: lyricHighlightedFont,
                                                               textColor: lyricTextColor,
@@ -137,7 +141,9 @@ public class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate
         contentInset = UIEdgeInsets(top: frame.height / 2, left: 0, bottom: frame.height / 2, right: 0)
     }
     
-    public func scroll(toTime time: TimeInterval, animated: Bool) {
+    // MARK: Controls
+    
+    internal func scroll(toTime time: TimeInterval, animated: Bool) {
         guard let lyrics = parser?.lyrics else {
             return
         }

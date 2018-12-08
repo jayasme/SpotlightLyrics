@@ -8,7 +8,7 @@
 
 ## Introducing
 
-`SpotlightLyrics` is an open-source component which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it is completely developed under [Swift](https://github.com/Apple/Swift) 4.2 and designed for both iPhone and iPad platforms.
+`SpotlightLyrics` is an open-source library which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it is completely developed under [Swift](https://github.com/Apple/Swift) 4.2 and designed for both iPhone and iPad platforms.
 
 <figure class="half">
 
@@ -17,7 +17,7 @@
 
 </figure>
 
-## How to integrate
+## Getting Started
 
 ### Cocoapods
 
@@ -31,48 +31,70 @@ pod 'SpotlightLyrics'
 - Copy `SpotlightLyrics.framework` from frameworks folder to the your project,
 - Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
 
-## How to use
+## How To Use
 
-To import the `SpotlightLyrics`, just import the `SpotlightLyrics` library in your code as usual.
+To start using `SpotlightLyrics` in your files, just do the following:
 
 ```Swift
 import SpotlightLyrics
 ```
 
-To parse the LRC file only, just use `LyricsParser` class, do the following
+### LyricaParser
+
+If you only parse LRC files, you can use the class `LyricsParser`, here's an example for it:
 
 ```Swift
 import SpotlightLyrics
 
-... Load the lyrics string from local or remote
+// ... Load the LRC string from local or remote
 
+// Pass your lyrics string to create an instance
 let parser = LyricsParser(lyrics: lyricsString)
+
+// Now you get everything about the lyrics
 print(parser.header.title)
 print(parser.header.author)
 print(parser.header.album)
 
-print(parser.lyrics[0].lyrics)
-print(parser.lyrics[0].time)
+for lyric in parser.lyrics {
+  print(lyric.text)
+  print(lyric.time)
+}
 ```
 
-To display the lyrics in your view or controller, do the following
+### LyricsView
+
+`SpotlightLyrics` provids an LRC displaying component for showing lyrics and scrolling like most of the music apps do:
 
 ```Swift
 import SpotlightLyrics
 
-... Load the lyrics string from local or remote
+// ... Load the LRC string from local or remote
 
+// Create an instance and add it to your UI
 let lyricsView = LyricsView()
 lyricsView.frame = self.view.bounds
 self.view.addSubView(lyricsView)
 
+// Pass the LRC string and style the LyricsView
 lyricsView.lyrics = lyricsString
 lyricsView.font = UIFont.systemFont(ofSize: 13)
 lyricsView.textColor = UIColor.black
+lyricsView.highlightedFont = UIFont.systemFont(ofSize: 13)
+lyricsView.highlightedTextColor = UIColor.lightGray
 
-// Scroll to the eplased time you want to highlight
-// You need to call this function uninterruptedly with your own thread or timer so that make it scroll.
-lyricsView.scroll(toTime: 20, animated: true)
+// Play
+lyricsView.timer.play()
+
+// Pause
+lyricsView.timer.pause()
+
+// Seek to an eplased time
+lyricsView.timer.seek(toTime: 20.0)
+
+// Start it over
+lyricsView.timer.seek(toTime: 0)
+lyricsView.timer.play()
 ```
 
 Also, please check the [Demo](https://github.com/jayasme/SpotlightLyrics_Demo)

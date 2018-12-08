@@ -3,7 +3,7 @@
 //  SpotlightLyrics
 //
 //  Created by Scott Rong on 2017/7/28.
-//  Copyright © 2017年 jayasme. All rights reserved.
+//  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
 import Foundation
@@ -11,11 +11,11 @@ import Foundation
 
 public class LyricsItem {
     
-    public init(time: TimeInterval, lyric: String = "") {
+    public init(time: TimeInterval, text: String = "") {
         self.time = time
-        self.lyric = lyric
+        self.text = text
     }
     
     public var time: TimeInterval
-    public var lyric: String
+    public var text: String
 }

@@ -14,6 +14,7 @@
 		1D079FDA21B6608F00D21A8F /* LyricsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D079FD121B6608F00D21A8F /* LyricsCellViewModel.swift */; };
 		1D079FDB21B6608F00D21A8F /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D079FD221B6608F00D21A8F /* LyricsView.swift */; };
 		1D079FDC21B6608F00D21A8F /* LyricsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D079FD321B6608F00D21A8F /* LyricsCell.swift */; };
+		1D3C8B1221BA7BB10020933A /* LyticsViewTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C8B1121BA7BB10020933A /* LyticsViewTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1D079FD121B6608F00D21A8F /* LyricsCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsCellViewModel.swift; sourceTree = "<group>"; };
 		1D079FD221B6608F00D21A8F /* LyricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		1D079FD321B6608F00D21A8F /* LyricsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsCell.swift; sourceTree = "<group>"; };
+		1D3C8B1121BA7BB10020933A /* LyticsViewTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyticsViewTimer.swift; sourceTree = "<group>"; };
 		1DEA77031F259A6C00C1040B /* SpotlightLyrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightLyrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				1D079FD221B6608F00D21A8F /* LyricsView.swift */,
+				1D3C8B1121BA7BB10020933A /* LyticsViewTimer.swift */,
 				1D079FD121B6608F00D21A8F /* LyricsCellViewModel.swift */,
 				1D079FD321B6608F00D21A8F /* LyricsCell.swift */,
 			);
@@ -171,6 +174,7 @@
 				1D079FD621B6608F00D21A8F /* LyricsParser.swift in Sources */,
 				1D079FDB21B6608F00D21A8F /* LyricsView.swift in Sources */,
 				1D079FDC21B6608F00D21A8F /* LyricsCell.swift in Sources */,
+				1D3C8B1221BA7BB10020933A /* LyticsViewTimer.swift in Sources */,
 				1D079FD921B6608F00D21A8F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@
 //  SpotlightLyrics
 //
 //  Created by Scott Rong on 2017/7/28.
-//  Copyright © 2017年 jayasme. All rights reserved.
+//  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
 import UIKit
@@ -67,8 +67,12 @@ internal class LyricsCellViewModel {
     
     private func update() {
         // produce the attributedString
-        attributedString = NSAttributedString(string: lyric, attributes: [.font: font])
-        highlightedAttributedString = NSAttributedString(string: lyric, attributes: [.font: highlightedFont])
+        attributedString = NSAttributedString(string: lyric, attributes: [.font: font,
+                                                                          .foregroundColor: textColor
+            ])
+        highlightedAttributedString = NSAttributedString(string: lyric, attributes: [.font: highlightedFont,
+                                                                                     .foregroundColor: highlightedTextColor
+            ])
         cell?.update(with: self)
     }
     

@@ -1,9 +1,9 @@
 //
 //  LyricsParser.swift
-//  ONFoundation
+//  SpotlightLyrics
 //
 //  Created by Scott Rong on 2017/4/2.
-//  Copyright © 2017年 on. All rights reserved.
+//  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
 import Foundation
@@ -74,9 +74,9 @@ public class LyricsParser {
             
             let intervalPerHeader = self.lyrics[0].time / TimeInterval(headers.count)
             
-            var headerLyrics: [LyricsItem] = headers.enumerated().map { LyricsItem(time: intervalPerHeader * TimeInterval($0.offset), lyric: $0.element) }
+            var headerLyrics: [LyricsItem] = headers.enumerated().map { LyricsItem(time: intervalPerHeader * TimeInterval($0.offset), text: $0.element) }
             if (headerLyrics.count > 0) {
-                headerLyrics.append(LyricsItem(time: intervalPerHeader * TimeInterval(headerLyrics.count), lyric: ""))
+                headerLyrics.append(LyricsItem(time: intervalPerHeader * TimeInterval(headerLyrics.count), text: ""))
             }
             
             self.lyrics.insert(contentsOf: headerLyrics, at: 0)
@@ -163,10 +163,10 @@ public class LyricsParser {
         }
         
         if items.count == 0 {
-            items.append(LyricsItem(time: 0, lyric: line))
+            items.append(LyricsItem(time: 0, text: line))
         }
 
-        items.forEach{ $0.lyric = cLine }
+        items.forEach{ $0.text = cLine }
         return items
     }
 }

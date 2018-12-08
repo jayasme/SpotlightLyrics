@@ -1,9 +1,9 @@
 //
 //  LyricsCell.swift
-//  ONFoundation
+//  SpotlightLyrics
 //
 //  Created by Scott Rong on 2017/4/2.
-//  Copyright © 2017年 on. All rights reserved.
+//  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
 import UIKit
