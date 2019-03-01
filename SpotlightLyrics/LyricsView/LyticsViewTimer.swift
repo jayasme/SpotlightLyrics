@@ -39,6 +39,7 @@ public class LyricsViewTimer {
     }
     
     public func seek(toTime time: TimeInterval) {
+        eplasedTime = time
         lyricsView?.scroll(toTime: time, animated: true)
     }
     

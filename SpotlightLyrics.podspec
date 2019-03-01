@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
    s.name = 'SpotlightLyrics'
-   s.version = '0.1.4'
+   s.version = '0.1.5'
    s.license = 'MIT'
    s.summary = 'An LRC file parser for iOS.'
    s.homepage = 'https://github.com/jayasme/SpotlightLyrics'
