@@ -9,15 +9,10 @@
 import Foundation
 
 
-public protocol LyricsManagerDelegate: class {
-    
-    func occoursError(error: Error)
-}
-
 public class LyricsParser {
     
     public var header: LyricsHeader
-    public var lyrics: [LyricsItem] = []
+    public var lyrics: [LyricsLine] = []
     public var autor: String = ""
     
     // MARK: Initializers
@@ -74,13 +69,17 @@ public class LyricsParser {
             
             let intervalPerHeader = self.lyrics[0].time / TimeInterval(headers.count)
             
-            var headerLyrics: [LyricsItem] = headers.enumerated().map { LyricsItem(time: intervalPerHeader * TimeInterval($0.offset), text: $0.element) }
+            var headerLyrics: [LyricsLine] = headers.enumerated().map { LyricsLine(time: intervalPerHeader * TimeInterval($0.offset), text: $0.element) }
             if (headerLyrics.count > 0) {
-                headerLyrics.append(LyricsItem(time: intervalPerHeader * TimeInterval(headerLyrics.count), text: ""))
+                headerLyrics.append(LyricsLine(time: intervalPerHeader * TimeInterval(headerLyrics.count), text: ""))
             }
             
             self.lyrics.insert(contentsOf: headerLyrics, at: 0)
         }
+        
+    }
+    
+    private func parseFragment() {
         
     }
     
@@ -118,7 +117,7 @@ public class LyricsParser {
             return
         }
         
-        lyrics += parseLyric(line: line)
+        lyrics += parseBodyLine(line: line)
     }
     
     private func parseHeader(prefix: String, line: String) -> String? {
@@ -131,9 +130,9 @@ public class LyricsParser {
         }
     }
     
-    private func parseLyric(line: String) -> [LyricsItem] {
+    private func parseBodyLine(line: String) -> [LyricsLine] {
         var cLine = line
-        var items : [LyricsItem] = []
+        var items : [LyricsLine] = []
         while(cLine.hasPrefix("[")) {
             guard let closureIndex = cLine.range(of: "]")?.lowerBound else {
                 break
@@ -143,20 +142,7 @@ public class LyricsParser {
             let endIndex = cLine.index(closureIndex, offsetBy: -1)
             let amidString = String(cLine[startIndex..<endIndex])
             
-            let amidStrings = amidString.components(separatedBy: ":")
-            var hour:TimeInterval = 0
-            var minute: TimeInterval = 0
-            var second: TimeInterval = 0
-            if amidStrings.count >= 1 {
-                second = TimeInterval(amidStrings[amidStrings.count - 1]) ?? 0
-            }
-            if amidStrings.count >= 2 {
-                minute = TimeInterval(amidStrings[amidStrings.count - 2]) ?? 0
-            }
-            if amidStrings.count >= 3 {
-                hour = TimeInterval(amidStrings[amidStrings.count - 3]) ?? 0
-            }
-
+            
             items.append(LyricsItem(time: hour * 3600 + minute * 60 + second + header.offset))
             
             cLine.removeSubrange(line.startIndex..<cLine.index(closureIndex, offsetBy: 1))
@@ -168,5 +154,45 @@ public class LyricsParser {
 
         items.forEach{ $0.text = cLine }
         return items
+    }
+    
+    // Parse times like [1:30]
+    // Returns TimeInterval if time has been parsed successfully, otherwise returns nil.
+    private func parseLineTime(str: String) throws -> TimeInterval? {
+        guard str.hasPrefix("[") else {
+            return nil
+        }
+        
+        guard let endIndex = cLine.range(of: "]")?.lowerBound else {
+            throw Error("Expected a ']'.")
+        }
+        
+        let timeStr = String(str[0..<endIndex])
+        let time = parseLineTime(str: timeStr)
+        
+        items.append(LyricsItem(time: hour * 3600 + minute * 60 + second + header.offset))
+    }
+    
+    // Parse times like <1:30>
+    private func parseFragmentTime(str: String) {
+        
+    }
+    
+    private func parseTimeString(timeStr: String) {
+        let sepStrings = amidString.components(separatedBy: ":")
+        var hour:TimeInterval = 0
+        var minute: TimeInterval = 0
+        var second: TimeInterval = 0
+        if sepStrings.count >= 1 {
+            second = TimeInterval(amidStrings[amidStrings.count - 1]) ?? 0
+        }
+        if sepStrings.count >= 2 {
+            minute = TimeInterval(amidStrings[amidStrings.count - 2]) ?? 0
+        }
+        if sepStrings.count >= 3 {
+            hour = TimeInterval(amidStrings[amidStrings.count - 3]) ?? 0
+        }
+        
+        return TimeInterval(time: hour * 3600 + minute * 60 + second)
     }
 }

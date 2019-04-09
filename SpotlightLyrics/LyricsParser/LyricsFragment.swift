@@ -1,15 +1,15 @@
 //
-//  LyricsError.swift
+//  LyricsFragment.swift
 //  SpotlightLyrics
 //
-//  Created by Scott Rong on 2017/7/28.
-//  Copyright © 2017 Scott Rong. All rights reserved.
+//  Created by Scott Rong on 2019/3/13.
+//  Copyright © 2019 Scott Rong. All rights reserved.
 //
 
 import Foundation
 
 
-public class LyricsItem {
+public struct LyricsFragment {
     
     public init(time: TimeInterval, text: String = "") {
         self.time = time

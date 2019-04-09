@@ -48,6 +48,12 @@ internal class LyricsCellViewModel {
         }
     }
     
+    public var progress: Int = 0 {
+        didSet {
+            update()
+        }
+    }
+    
     public static func cellViewModel(lyric: String, font: UIFont, highlightedFont: UIFont, textColor: UIColor, highlightedTextColor: UIColor) -> LyricsCellViewModel {
         return LyricsCellViewModel(lyric: lyric,
                                    font: font,
