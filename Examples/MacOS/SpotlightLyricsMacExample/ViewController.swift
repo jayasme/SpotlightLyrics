@@ -11,6 +11,8 @@ import SpotlightLyrics
 /// An example for usage of LyricsView
 final class ViewController: NSViewController {
     
+    private lazy var playButton = NSButton(title: "Play from beginning", target: self, action: #selector(playFromBeginning))
+    
     private lazy var lyricsView: LyricsView = {
         let lyricsView = LyricsView()
         if let filepath = Bundle.main.path(forResource: "imagine.lrc", ofType: "txt") {
@@ -46,9 +48,21 @@ final class ViewController: NSViewController {
         NSLayoutConstraint.activate([
             lyricsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             lyricsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            lyricsView.topAnchor.constraint(equalTo: view.topAnchor),
-            lyricsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            lyricsView.topAnchor.constraint(equalTo: view.topAnchor)
         ])
+        
+        view.addSubview(playButton)
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            playButton.topAnchor.constraint(equalTo: lyricsView.bottomAnchor),
+            playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
+        ])
+    }
+    
+    @objc private func playFromBeginning() {
+        lyricsView.timer.reset()
+        lyricsView.timer.play()
     }
 
 }

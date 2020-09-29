@@ -14,7 +14,7 @@ public final class LyricsViewTimer {
     
     internal weak var lyricsView: LyricsView? = nil
     
-    private var eplasedTime: TimeInterval = 0
+    private var elapsedTime: TimeInterval = 0
     
     // MARK: Controls
     
@@ -35,15 +35,20 @@ public final class LyricsViewTimer {
         timer = nil
     }
     
+    public func reset() {
+        pause()
+        elapsedTime = .zero
+    }
+    
     public func seek(toTime time: TimeInterval) {
-        eplasedTime = time
+        elapsedTime = time
         lyricsView?.scroll(toTime: time, animated: true)
     }
     
     // MARK: tick
     
     @objc private func tick() {
-        eplasedTime += TICK_INTERVAL
-        seek(toTime: eplasedTime)
+        elapsedTime += TICK_INTERVAL
+        seek(toTime: elapsedTime)
     }
 }
