@@ -6,10 +6,7 @@
 //  Copyright © 2018 Scott Rong. All rights reserved.
 //
 
-import UIKit
-
-
-public class LyricsViewTimer {
+public final class LyricsViewTimer {
     
     private let TICK_INTERVAL: TimeInterval = 0.1
     

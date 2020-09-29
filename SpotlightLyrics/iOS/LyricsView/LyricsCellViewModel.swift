@@ -6,9 +6,7 @@
 //  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
-import UIKit
-
-internal class LyricsCellViewModel {
+internal final class LyricsCellViewModel {
     
     // MARK: Properties
     

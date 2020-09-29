@@ -8,7 +8,7 @@ For English descriptions, click [here](README.md)
 
 ## 介绍
 
-`SpotlightLyrics`是一个开源库，主要用来解析并显示[LRC 歌词文件](<https://en.wikipedia.org/wiki/LRC_(file_format)>)，它完全使用[Swift](https://github.com/Apple/Swift)来开发并为 iPhone 和 iPad 平台而设计。
+`SpotlightLyrics`是一个开源库，主要用来解析并显示[LRC 歌词文件](<https://en.wikipedia.org/wiki/LRC_(file_format)>)，它完全使用[Swift](https://github.com/Apple/Swift)来开发并支持iOS和macOS。
 
 <figure class="half">
 
@@ -24,6 +24,7 @@ For English descriptions, click [here](README.md)
 ```
 pod 'SpotlightLyrics'
 ```
+也可用`pod 'SpotlightLyrics/Mac'` 或 `pod 'SpotlightLyrics/Mac'`来只导入所需的平台代码。
 
 ### 手动集成
 

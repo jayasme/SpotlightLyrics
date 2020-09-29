@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		448013E2252294C300835BB3 /* imagine.lrc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 448013E1252294C300835BB3 /* imagine.lrc.txt */; };
+		44AA9E6B25226B3700C837C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E6A25226B3700C837C5 /* AppDelegate.swift */; };
+		44AA9E6D25226B3700C837C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E6C25226B3700C837C5 /* ViewController.swift */; };
+		44AA9E6F25226B3B00C837C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AA9E6E25226B3B00C837C5 /* Assets.xcassets */; };
+		44AA9E7225226B3B00C837C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA9E7025226B3B00C837C5 /* Main.storyboard */; };
+		9EF2DDE2FEF28BE6CE6F0D84 /* Pods_SpotlightLyricsMacExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4DC3DD4DE1F7B674A621CE /* Pods_SpotlightLyricsMacExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CFBC993979771D1D0A9BC1C /* Pods-SpotlightLyricsMacExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotlightLyricsMacExample.debug.xcconfig"; path = "Target Support Files/Pods-SpotlightLyricsMacExample/Pods-SpotlightLyricsMacExample.debug.xcconfig"; sourceTree = "<group>"; };
+		448013E1252294C300835BB3 /* imagine.lrc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagine.lrc.txt; sourceTree = "<group>"; };
+		44AA9E6725226B3700C837C5 /* SpotlightLyricsMacExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotlightLyricsMacExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AA9E6A25226B3700C837C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44AA9E6C25226B3700C837C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44AA9E6E25226B3B00C837C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44AA9E7125226B3B00C837C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44AA9E7325226B3B00C837C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AA9E7425226B3B00C837C5 /* SpotlightLyricsMacExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpotlightLyricsMacExample.entitlements; sourceTree = "<group>"; };
+		4D15CE820CC98733C77E7566 /* Pods-SpotlightLyricsMacExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotlightLyricsMacExample.release.xcconfig"; path = "Target Support Files/Pods-SpotlightLyricsMacExample/Pods-SpotlightLyricsMacExample.release.xcconfig"; sourceTree = "<group>"; };
+		FC4DC3DD4DE1F7B674A621CE /* Pods_SpotlightLyricsMacExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotlightLyricsMacExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44AA9E6425226B3700C837C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF2DDE2FEF28BE6CE6F0D84 /* Pods_SpotlightLyricsMacExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44AA9E5E25226B3700C837C5 = {
+			isa = PBXGroup;
+			children = (
+				44AA9E6925226B3700C837C5 /* SpotlightLyricsMacExample */,
+				44AA9E6825226B3700C837C5 /* Products */,
+				8A4167D2B6E3B5AE94789FB7 /* Pods */,
+				F25E80F3826493A0309FB5C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		44AA9E6825226B3700C837C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44AA9E6725226B3700C837C5 /* SpotlightLyricsMacExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44AA9E6925226B3700C837C5 /* SpotlightLyricsMacExample */ = {
+			isa = PBXGroup;
+			children = (
+				448013E1252294C300835BB3 /* imagine.lrc.txt */,
+				44AA9E6A25226B3700C837C5 /* AppDelegate.swift */,
+				44AA9E6C25226B3700C837C5 /* ViewController.swift */,
+				44AA9E6E25226B3B00C837C5 /* Assets.xcassets */,
+				44AA9E7025226B3B00C837C5 /* Main.storyboard */,
+				44AA9E7325226B3B00C837C5 /* Info.plist */,
+				44AA9E7425226B3B00C837C5 /* SpotlightLyricsMacExample.entitlements */,
+			);
+			path = SpotlightLyricsMacExample;
+			sourceTree = "<group>";
+		};
+		8A4167D2B6E3B5AE94789FB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CFBC993979771D1D0A9BC1C /* Pods-SpotlightLyricsMacExample.debug.xcconfig */,
+				4D15CE820CC98733C77E7566 /* Pods-SpotlightLyricsMacExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F25E80F3826493A0309FB5C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC4DC3DD4DE1F7B674A621CE /* Pods_SpotlightLyricsMacExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44AA9E6625226B3700C837C5 /* SpotlightLyricsMacExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AA9E7725226B3B00C837C5 /* Build configuration list for PBXNativeTarget "SpotlightLyricsMacExample" */;
+			buildPhases = (
+				EAFAF53AF82A25DA5A4752B2 /* [CP] Check Pods Manifest.lock */,
+				44AA9E6325226B3700C837C5 /* Sources */,
+				44AA9E6425226B3700C837C5 /* Frameworks */,
+				44AA9E6525226B3700C837C5 /* Resources */,
+				8B964D355C10BC5EA39391C7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotlightLyricsMacExample;
+			productName = SpotlightLyricsMacExample;
+			productReference = 44AA9E6725226B3700C837C5 /* SpotlightLyricsMacExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44AA9E5F25226B3700C837C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					44AA9E6625226B3700C837C5 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 44AA9E6225226B3700C837C5 /* Build configuration list for PBXProject "SpotlightLyricsMacExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44AA9E5E25226B3700C837C5;
+			productRefGroup = 44AA9E6825226B3700C837C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44AA9E6625226B3700C837C5 /* SpotlightLyricsMacExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44AA9E6525226B3700C837C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA9E6F25226B3B00C837C5 /* Assets.xcassets in Resources */,
+				44AA9E7225226B3B00C837C5 /* Main.storyboard in Resources */,
+				448013E2252294C300835BB3 /* imagine.lrc.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B964D355C10BC5EA39391C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotlightLyricsMacExample/Pods-SpotlightLyricsMacExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpotlightLyricsMacExample/Pods-SpotlightLyricsMacExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpotlightLyricsMacExample/Pods-SpotlightLyricsMacExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAFAF53AF82A25DA5A4752B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpotlightLyricsMacExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44AA9E6325226B3700C837C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA9E6D25226B3700C837C5 /* ViewController.swift in Sources */,
+				44AA9E6B25226B3700C837C5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44AA9E7025226B3B00C837C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AA9E7125226B3B00C837C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44AA9E7525226B3B00C837C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44AA9E7625226B3B00C837C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		44AA9E7825226B3B00C837C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFBC993979771D1D0A9BC1C /* Pods-SpotlightLyricsMacExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpotlightLyricsMacExample/SpotlightLyricsMacExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpotlightLyricsMacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.SpotlightLyricsMacExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		44AA9E7925226B3B00C837C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D15CE820CC98733C77E7566 /* Pods-SpotlightLyricsMacExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpotlightLyricsMacExample/SpotlightLyricsMacExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpotlightLyricsMacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.SpotlightLyricsMacExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44AA9E6225226B3700C837C5 /* Build configuration list for PBXProject "SpotlightLyricsMacExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA9E7525226B3B00C837C5 /* Debug */,
+				44AA9E7625226B3B00C837C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AA9E7725226B3B00C837C5 /* Build configuration list for PBXNativeTarget "SpotlightLyricsMacExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA9E7825226B3B00C837C5 /* Debug */,
+				44AA9E7925226B3B00C837C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44AA9E5F25226B3700C837C5 /* Project object */;
+}

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 open class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     private var parser: LyricsParser? = nil
