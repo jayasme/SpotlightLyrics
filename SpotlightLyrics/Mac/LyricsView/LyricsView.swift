@@ -192,11 +192,11 @@ extension LyricsView: NSTableViewDelegate {
             return
         }
 
-        if let lastIndex = lastIndex {
+        if let lastIndex = lastIndex, lyricsViewModels.count > lastIndex {
             lyricsViewModels[lastIndex].highlighted = false
         }
 
-        if index > 0 {
+        if index > 0, lyricsViewModels.count >= index {
             lyricsViewModels[index - 1].highlighted = true
             tableView.centreRow(row: index - 1, animated: true)
             lastIndex = index - 1
@@ -212,6 +212,9 @@ private extension LyricsView {
 
 private extension NSTableView {
     func centreRow(row: Int, animated: Bool) {
+        guard numberOfRows > row else {
+            return
+        }
         selectRowIndexes(IndexSet.init(integer: row), byExtendingSelection: false)
         let rowRect = frameOfCell(atColumn: 0, row: row)
         if let scrollView = enclosingScrollView {
