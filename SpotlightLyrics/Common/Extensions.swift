@@ -6,8 +6,6 @@
 //  Copyright © 2017 Scott Rong. All rights reserved.
 //
 
-import UIKit
-
 extension CharacterSet {
     public static var quotes = CharacterSet(charactersIn: "\"'")
 }

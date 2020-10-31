@@ -8,7 +8,7 @@
 
 ## Introducing
 
-`SpotlightLyrics` is an open-source library which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it is completely developed under [Swift](https://github.com/Apple/Swift) 4.2 and designed for both iPhone and iPad platforms.
+`SpotlightLyrics` is an open-source library which helps developers in parsing & displaying [LRC files](<https://en.wikipedia.org/wiki/LRC_(file_format)>), it is completely developed under [Swift](https://github.com/Apple/Swift) 4.2 and designed for iOS and macOS.
 
 <figure class="half">
 
@@ -25,11 +25,13 @@
 pod 'SpotlightLyrics'
 ```
 
+Use `pod 'SpotlightLyrics/Mac'` or `pod 'SpotlightLyrics/Mac'` to only pull in the subspec for a specific platform.
+
 ### Manually
 
 - Download or clone the repository and then compile it to obtain `SpotlightLyrics.framework`,
 - Copy `SpotlightLyrics.framework` from frameworks folder to the your project,
-- Open your project in XCode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
+- Open your project in Xcode and navigate to `General` - `Linked Frameworks and Libraries` to add the component into you project
 
 ## How To Use
 

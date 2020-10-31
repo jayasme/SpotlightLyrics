@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 open class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     private var parser: LyricsParser? = nil
@@ -160,11 +159,11 @@ open class LyricsView: UITableView, UITableViewDataSource, UITableViewDelegate {
             return
         }
         
-        if let lastIndex = lastIndex {
+        if let lastIndex = lastIndex, lyricsViewModels.count > lastIndex {
             lyricsViewModels[lastIndex].highlighted = false
         }
         
-        if index > 0 {
+        if index > 0, lyricsViewModels.count >= index {
             lyricsViewModels[index - 1].highlighted = true
             scrollToRow(at: IndexPath(row: index - 1, section: 0), at: .middle, animated: animated)
             lastIndex = index - 1

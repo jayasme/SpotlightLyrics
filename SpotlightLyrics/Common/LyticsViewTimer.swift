@@ -6,10 +6,7 @@
 //  Copyright © 2018 Scott Rong. All rights reserved.
 //
 
-import UIKit
-
-
-public class LyricsViewTimer {
+public final class LyricsViewTimer {
     
     private let TICK_INTERVAL: TimeInterval = 0.1
     
@@ -17,7 +14,7 @@ public class LyricsViewTimer {
     
     internal weak var lyricsView: LyricsView? = nil
     
-    private var eplasedTime: TimeInterval = 0
+    private var elapsedTime: TimeInterval = 0
     
     // MARK: Controls
     
@@ -38,15 +35,20 @@ public class LyricsViewTimer {
         timer = nil
     }
     
+    public func reset() {
+        pause()
+        elapsedTime = .zero
+    }
+    
     public func seek(toTime time: TimeInterval) {
-        eplasedTime = time
+        elapsedTime = time
         lyricsView?.scroll(toTime: time, animated: true)
     }
     
     // MARK: tick
     
     @objc private func tick() {
-        eplasedTime += TICK_INTERVAL
-        seek(toTime: eplasedTime)
+        elapsedTime += TICK_INTERVAL
+        seek(toTime: elapsedTime)
     }
 }
